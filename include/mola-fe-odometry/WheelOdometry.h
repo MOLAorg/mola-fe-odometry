@@ -24,6 +24,8 @@ namespace mola
  * \ingroup mola_fe_odometry_grp */
 class WheelOdometry : public FrontEndBase
 {
+    DEFINE_MRPT_OBJECT(WheelOdometry)
+
    public:
     WheelOdometry();
     virtual ~WheelOdometry() override = default;
