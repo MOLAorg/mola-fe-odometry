@@ -1,3 +1,5 @@
+.. _mola-fe-odometry:
+
 ===========================
 Module: mola-fe-odometry
 ===========================
