@@ -24,7 +24,7 @@ namespace mola
  * \ingroup mola_fe_odometry_grp */
 class WheelOdometry : public FrontEndBase
 {
-    DEFINE_MRPT_OBJECT(WheelOdometry)
+    DEFINE_MRPT_OBJECT(WheelOdometry, mola)
 
    public:
     WheelOdometry();
