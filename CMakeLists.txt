@@ -32,4 +32,7 @@ mola_add_library(
 	PUBLIC_LINK_LIBRARIES
 		mola-kernel
 		mrpt::obs
+	CMAKE_DEPENDENCIES
+		mola-kernel
+		mrpt-obs
 )
