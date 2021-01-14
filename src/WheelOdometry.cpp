@@ -17,7 +17,7 @@
  */
 
 #include <mola-fe-odometry/WheelOdometry.h>
-#include <mola-kernel/yaml_helpers.h>
+#include <mola-yaml/yaml_helpers.h>
 #include <mrpt/core/initializer.h>
 #include <mrpt/obs/CObservationOdometry.h>
 #include <mrpt/poses/Lie/SE.h>
