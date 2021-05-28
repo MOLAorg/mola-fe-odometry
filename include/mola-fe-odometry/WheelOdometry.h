@@ -72,7 +72,8 @@ class WheelOdometry : public FrontEndBase
 
    private:
     /** The worker thread pool with 1 thread for processing incomming scans */
-    mrpt::WorkerThreadsPool worker_pool_{1};
+    mrpt::WorkerThreadsPool worker_pool_{
+        1, mrpt::WorkerThreadsPool::POLICY_FIFO, "worker_pool"};
 
     /** All variables that hold the algorithm state */
     struct MethodState
