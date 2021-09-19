@@ -18,10 +18,10 @@
 
 #include <mola-fe-odometry/WheelOdometry.h>
 #include <mola-yaml/yaml_helpers.h>
+#include <mrpt/containers/yaml.h>
 #include <mrpt/core/initializer.h>
 #include <mrpt/obs/CObservationOdometry.h>
 #include <mrpt/poses/Lie/SE.h>
-#include <mrpt/containers/yaml.h>
 
 using namespace mola;
 
@@ -39,12 +39,11 @@ MRPT_INITIALIZER(do_register_WheelOdometry)
 
 WheelOdometry::WheelOdometry() = default;
 
-void WheelOdometry::initialize(const std::string& cfg_block)
+void WheelOdometry::initialize(const Yaml& c)
 {
     MRPT_TRY_START
 
     // Load params:
-    auto c   = mrpt::containers::yaml::FromText(cfg_block);
     auto cfg = c["params"];
     MRPT_LOG_DEBUG_STREAM("Loading these params:\n" << cfg);
 
