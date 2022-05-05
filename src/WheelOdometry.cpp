@@ -81,7 +81,8 @@ void WheelOdometry::onNewObservation(CObservation::Ptr& o)
     if (o->sensorLabel != raw_sensor_label_) return;
 
     // Enqueue task:
-    worker_pool_.enqueue(&WheelOdometry::doProcessNewObservation, this, o);
+    const auto newObsFut =
+        worker_pool_.enqueue(&WheelOdometry::doProcessNewObservation, this, o);
 
     MRPT_TRY_END
 }
